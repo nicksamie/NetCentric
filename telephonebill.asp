@@ -1,12 +1,12 @@
 <html>
 <body>
 <form method="get">
-Enter the no. of calls made for this monthd : </br>
+Enter the no. of calls made for this month : </br>
 <input type="text" name="calls_no"> <br/>
 <input type="submit" name = "Submit">
 </form>
 <%
-dim call_no,check,amt, min_charge,total
+dim calls_no,check,amt, min_charge,total
 calls_no = Request.QueryString("calls_no")
 'string = Request.QueryString("string")
 min_charge = 190
