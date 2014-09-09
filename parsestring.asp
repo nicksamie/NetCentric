@@ -2,21 +2,22 @@
 <head><title>Aug 25 Task</title></head>
 <body>
 <%
-Dim string,newstring,pos,name,address
-string = "Ram Nepal;Baluwatar kathmandu;1st Baishakh 2070"
-name=left(string,Instr(string,";")-1)
+Dim text,newstring,pos,name,address
+text = "Ramesh Nepal;Baluwatar kathmandu;1st Baishakh 2070"
+name=left(text,Instr(text,";")-1)
 response.write("name : "&name)
 
-pos = InStr(1,string,";",1)
+pos = InStr(1,text,";")
+'position of semi-colon'
 response.write ("<br/>pos : "&pos)
-address = left(string,Instr(10,string,";")-1)
+
+newtext=right(text,len(text)-len(name)-1)
+response.write("<br/> : "&newtext)
+
+address = left(newtext,Instr(pos,newtext,";")-1)
 response.write("<br/> address : "& address)
 
-newstring=right(string,len(string)-len(name)-1)
-'response.write(newstring)
-
-
-dob = right(string,len(newstring)-len(address)-1)
+dob = right(newtext,len(newtext)-len(address)-1)
 response.write ("<br/> dob : " & dob)
 
 
