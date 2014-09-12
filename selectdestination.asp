@@ -22,7 +22,7 @@ Select Your Destination </br>
 		response.write("Please Select Any one Destination")
 	else
 		for each i in request.querystring("destination")
-			response.write("</br> destination is : "&i)
+			response.write("</br> Hello! Welcome to  : "&i)
 		Next
 	end if
 %>
