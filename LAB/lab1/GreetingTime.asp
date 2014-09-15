@@ -1,5 +1,5 @@
 <html>
-<head><title>Aug 25 Task</title></head>
+<head><title>Greeting Time After 8</title></head>
 <body>
 <!--Random Greeting Only After 8:00 AM
 Hint : Hour(NOW), Int(Rnd * 4), Select Case item...Case 0, 1,2,3 ..End Select-->
@@ -9,11 +9,13 @@ Hint : Hour(NOW), Int(Rnd * 4), Select Case item...Case 0, 1,2,3 ..End Select-->
 dim h
 h=hour(now())
 
-response.write("<p>" & now())
-response.write("</p>")
 dim random
 randomize
 random = Int(Rnd * 4)
+
+response.write("<br/>Current time is : " & now())
+response.write("<p>")
+
 If h>8 then
 	Select Case random
 	Case 0
@@ -26,7 +28,7 @@ If h>8 then
 		response.write("Case 3 Hello Greetings!")
    End Select
 else
-   response.write("No Greeting!")
+   response.write("Sorry !! No Greeting! It's already 8 past")
 end if
 
 %>

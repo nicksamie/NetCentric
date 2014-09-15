@@ -1,4 +1,5 @@
 <html>
+<title>lab 4 Select Destination</title>
 <body>
 <form method="get" >
 Select Your Destination </br>
@@ -17,7 +18,6 @@ Select Your Destination </br>
 <%
 	dim destination
 	destination = request.querystring("destination")
-	'response.write("Destination selected is : "&destination)
 	if(destination = "") then
 		response.write("Please Select Any one Destination")
 	else
