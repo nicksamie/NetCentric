@@ -1,10 +1,10 @@
 <html>
-<title>lab 4 Login Page</title>
+<title>lab 5 Find Session ID</title>
 <body>
 <h1>REGISTER PAGE</h1>
 <%
 if (Request.Cookies("uname") <> "") then
-	Response.Redirect "redirectHome.html"
+	Response.Redirect "displayuser.asp"
 end if
 
 %>
@@ -26,9 +26,12 @@ end if
 
 	if(checkbox = "1") then
 		Response.Cookies("uname")=username
+		response.Cookies("fname")=firstname
 	end if	
+	fname = Request.Cookies("fname")
 	uname=Request.Cookies("uname")
-	'Response.Cookies("Username").Expires=#May 10,2012#
+	Session.Timeout=5
+	Response.Cookies("uname").Expires= date -2 'dateAdd("n", 1, Now()) 
 	response.write("Cookies value" &uname)
 %>
 
